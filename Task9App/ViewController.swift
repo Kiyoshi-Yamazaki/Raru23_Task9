@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak private var selectPrefecturesLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         selectPrefecturesLabel.text = "未選択"
@@ -21,7 +22,7 @@ class ViewController: UIViewController {
 
     @IBAction func getPrefecturesName(segue: UIStoryboardSegue) {
         if let secondVC = segue.source as? SecondViewController {
-            selectPrefecturesLabel.text = secondVC.selectedPreFecturesName
+            selectPrefecturesLabel.text = secondVC.selectedPrefecturesName
         }
     }
 }
