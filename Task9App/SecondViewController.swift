@@ -9,7 +9,7 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
-    var selectedPreFecturesName: String = "未選択"
+    private(set) var selectedPrefecturesName: String = "未選択"
 
     @IBAction private func tapTokyo(_ sender: Any) {
         unwindowSegue(prefecture: "東京都", sender: sender)
@@ -28,7 +28,7 @@ class SecondViewController: UIViewController {
     }
 
     private func unwindowSegue(prefecture: String, sender: Any) {
-        selectedPreFecturesName = prefecture
+        selectedPrefecturesName = prefecture
         performSegue(withIdentifier: "unwindowSegue", sender: sender)
     }
 }
